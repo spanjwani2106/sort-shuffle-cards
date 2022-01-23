@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  background-color: #efefef;
+}
+.header {
+  background-color: #bfbfbf;
+  height: 8px;
+}
+.footer {
+  height: 100px;
+  padding: 20px;
+  text-align: center;
+  font-style: italic;
+  box-sizing: border-box;
+}
+.content {
+  height: calc(100vh - 108px);
+  overflow: auto;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.button-collection {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.card-wrapper {
+  flex: 4;
+  height: 100%;
+}
+
+.button {
+  background: #72c3dc;
+  padding: 10px;
+  width: 120px;
+  height: 40px;
+  box-shadow: 0 2px 1px 1px #6f98a8;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background: #2b8ead;
+}
+
+.color-palette1 {
+  background-color: #6f98a8;
+}
+.color-palette2 {
+  background-color: #2b8ead;
+}
+.color-palette3 {
+  background-color: #2f454e;
+}
+.color-palette4 {
+  background-color: #bfbfbf;
+}
+.list {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+}
+
+.item {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+}
+
+@media only screen and (max-width: 960px) {
+  body {
+    background-color: #ffffff;
+  }
+  .content {
+    flex-direction: column;
+    height: calc(100vh - 68px);;
+  }
+  .footer{
+    height: 60px;
+  }
+  .card-wrapper {
+    order: 2;
+    flex: 8;
+  }
+  .list {
+    margin: 0 15px;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+  }
+  .button-collection {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .button {
+    margin-right: 20px;
+  }
+  .item {
+    font-size: 16px;
+    color: #000000;
+    background: #efefef;
+    border-left: 5px solid transparent;
+  }
+  .color-palette1 {
+    border-color: #6f98a8;
+  }
+  .color-palette2 {
+    border-color: #2b8ead;
+  }
+  .color-palette3 {
+    border-color: #2f454e;
+  }
+  .color-palette4 {
+    border-color: #bfbfbf;
+  }
+}
